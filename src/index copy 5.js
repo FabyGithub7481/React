@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom/client";
-import {Button} from "./Button";
+import { UserCard } from "./Greeting.js";
 
 // una forma de seleccionar el div root el elemento root
 /* const rootElement= document.getElementById('root')
@@ -10,14 +10,7 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 //fragment <> despues
 root.render(
   <>
-  <Button text="Click me"/>
-  <Button text="Pay"/>
-  <Button text="Send"/>
-  {/* <Button text={{text: "Pay"}}/> */}
-  {/* <Button text={true}/> */}
-  <Button text="" name="Joe"/>
-
-    {/* <UserCard
+    <UserCard
       name="Faby"
       amount={3000}
       married={true}
@@ -34,6 +27,6 @@ root.render(
       points={[52, 96]}
       address={{ street: "158 main", city: "Quito" }}
       
-    /> */}
+    />
   </>
 );
