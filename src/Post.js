@@ -1,17 +1,23 @@
-import {VscGlobe} from "react-icons/vsc"; 
+import { VscGlobe } from "react-icons/vsc";
+import Button from "@material-ui/core/Button";
+
 // es lo mismo que una function
 export const Post = () => {
   return (
-    <button
-      onClick={() => {
-        fetch("https://jsonplaceholder.typicode.com/posts")
-          .then(response => response.json())
-          .then(data => console.log(data))
-          .catch(error => console.error(error))
-      }}
-    >
-    <VscGlobe />
-      Traer Datos
-    </button>
+    <>
+      <Button variant="contained">Default</Button>
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
+      <Button variant="contained" color="secondary">
+        Secondary
+      </Button>
+      <Button variant="contained" disabled>
+        Disabled
+      </Button>
+      <Button variant="contained" color="primary" href="#contained-buttons">
+        Link
+      </Button>
+    </>
   );
 };
