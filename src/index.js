@@ -20,13 +20,24 @@ const users = [
     email: "joe@gmail.com",
     image: "https://robohash.org/user2",
   },
+  {
+    id: 3,
+    name: "Mau",
+    email: "mau@gmail.com",
+    image: "https://robohash.org/user3",
+  },
 ];
 
 //fragment <> despues
 root.render(
   <>
-    {users.map((user,index) => {
-      return <h1 key={index}>{user.name}</h1>;
+    {users.map((user, index) => {
+      return (
+        <div key={index}>
+          <h1>{user.name}</h1>
+          <img src={user.image} alt="" />
+        </div>
+      );
     })}
   </>
 );
